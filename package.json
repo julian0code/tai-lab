@@ -5,7 +5,9 @@
         "dev:backend": "cd backend && .\\mvnw.cmd spring-boot:run",
         "test:backend": "cd backend && .\\mvnw.cmd test",
         "dev:frontend": "pnpm --dir frontend dev",
+        "test:frontend": "pnpm --dir frontend test",
         "build:frontend": "pnpm --dir frontend build",
+        "test": "pnpm test:backend && pnpm test:frontend",
         "dev": "concurrently -k -n BACKEND,FRONTEND \"pnpm dev:backend\" \"pnpm dev:frontend\""
     },
     "devDependencies": {
